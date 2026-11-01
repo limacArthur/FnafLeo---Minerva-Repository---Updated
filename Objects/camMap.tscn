@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://bfkhj057rheic"]
+
+[ext_resource type="Script" uid="uid://ce6b0h24hd4rf" path="res://Scripts/Monitor/camMap.cs" id="1_56hag"]
+[ext_resource type="Texture2D" uid="uid://3xkwhyu7jwe" path="res://Sprites/Monitor/Map Borders.png" id="2_7gqd5"]
+[ext_resource type="PackedScene" uid="uid://bn1mwhmlm428x" path="res://Objects/cam_button.tscn" id="2_8ne64"]
+
+[node name="camMap" type="Node2D" unique_id=1827316323]
+script = ExtResource("1_56hag")
+
+[node name="MapBorders" type="Sprite2D" parent="." unique_id=89385657]
+texture = ExtResource("2_7gqd5")
+
+[node name="RepairRoom" parent="." unique_id=313685133 instance=ExtResource("2_8ne64")]
+position = Vector2(-266, -189)
+camID = 7
+camName = "REP R"
+
+[node name="Backstage" parent="." unique_id=1399604419 instance=ExtResource("2_8ne64")]
+position = Vector2(-58, -247)
+camName = "BKST"
+
+[node name="DressingRoom" parent="." unique_id=166789298 instance=ExtResource("2_8ne64")]
+position = Vector2(173, -165)
+camID = 4
+camName = "DRS R"
+
+[node name="CorridorC" parent="." unique_id=1867349343 instance=ExtResource("2_8ne64")]
+position = Vector2(-243, -101)
+camID = 2
+camName = "CRD C"
+
+[node name="MainStage" parent="." unique_id=605133093 instance=ExtResource("2_8ne64")]
+position = Vector2(-59, -127)
+camID = 5
+camName = "STAGE"
+
+[node name="Adm" parent="." unique_id=722405752 instance=ExtResource("2_8ne64")]
+position = Vector2(-266, -12)
+camID = 1
+camName = "ADM"
+
+[node name="Kitchen" parent="." unique_id=1458750635 instance=ExtResource("2_8ne64")]
+position = Vector2(173, 53)
+camID = 3
+camName = "KTC"
+
+[node name="C1" parent="." unique_id=1381369623 instance=ExtResource("2_8ne64")]
+position = Vector2(44, 115)
+camID = 9
+camName = "C1"
+
+[node name="C2" parent="." unique_id=1340483427 instance=ExtResource("2_8ne64")]
+position = Vector2(-163, 115)
+camID = 8
+camName = "C2"

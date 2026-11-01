@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://c8n8wvunvahne"]
+
+[ext_resource type="AudioStream" uid="uid://chucbkdeeec8y" path="res://Audio/static.mp3" id="1_oxgoa"]
+[ext_resource type="SpriteFrames" uid="uid://gnly5j5mbfap" path="res://Sprites/Frames/monitor.tres" id="1_ukrc0"]
+[ext_resource type="Script" uid="uid://cogkrqkflql1j" path="res://Scripts/Monitor/MonitorTransitions.cs" id="2_5b4l5"]
+[ext_resource type="SpriteFrames" uid="uid://cccn6ype7hnx" path="res://Sprites/Frames/cameras.tres" id="2_e2bag"]
+[ext_resource type="Texture2D" uid="uid://mx27ui7dt5bi" path="res://Sprites/Monitor/Monitor trigger.png" id="3_f3s0b"]
+[ext_resource type="Script" uid="uid://dkmceprku4ibh" path="res://Scripts/Monitor/MonitorStatic.cs" id="4_vx8jr"]
+[ext_resource type="Script" uid="uid://g4fjs1kcsmfi" path="res://Scripts/Monitor/Trigger.cs" id="4_wdpir"]
+[ext_resource type="Script" uid="uid://dssg3uq6pru8x" path="res://Scripts/Monitor/Cameras.cs" id="5_ry3wj"]
+[ext_resource type="PackedScene" uid="uid://bfkhj057rheic" path="res://Objects/camMap.tscn" id="9_l54ey"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ungyi"]
+frequency = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_k41lo"]
+noise = SubResource("FastNoiseLite_ungyi")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k41lo"]
+size = Vector2(1062, 69)
+
+[node name="Monitor" type="Node2D" unique_id=719269107]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=213002391]
+offset = Vector2(579, 307)
+transform = Transform2D(1, 0, 0, 1, 579, 307)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer" unique_id=291065271]
+stream = ExtResource("1_oxgoa")
+
+[node name="Transition" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=1669787938]
+visible = false
+sprite_frames = ExtResource("1_ukrc0")
+animation = &"Down"
+script = ExtResource("2_5b4l5")
+
+[node name="Cameras" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=1228997810]
+visible = false
+sprite_frames = ExtResource("2_e2bag")
+script = ExtResource("5_ry3wj")
+
+[node name="Static" type="Sprite2D" parent="CanvasLayer" unique_id=1656459821]
+visible = false
+z_index = 2
+position = Vector2(-2, -0.50001526)
+scale = Vector2(15.270589, 5.6796875)
+texture = SubResource("NoiseTexture2D_k41lo")
+hframes = 6
+vframes = 4
+script = ExtResource("4_vx8jr")
+
+[node name="Trigger" type="Sprite2D" parent="CanvasLayer" unique_id=1150877227]
+position = Vector2(-423.55658, 306.8125)
+scale = Vector2(0.1372466, 0.28256327)
+texture = ExtResource("3_f3s0b")
+script = ExtResource("4_wdpir")
+
+[node name="Area2D" type="Area2D" parent="CanvasLayer/Trigger" unique_id=197767094]
+position = Vector2(6051.5645, -600.9716)
+scale = Vector2(1.7184108, 1.7184108)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Trigger/Area2D" unique_id=1965237686]
+position = Vector2(-3522.4849, 348.03622)
+shape = SubResource("RectangleShape2D_k41lo")
+
+[node name="camMap" parent="CanvasLayer" unique_id=948136884 instance=ExtResource("9_l54ey")]
+z_index = 10
+position = Vector2(415, 188)
+scale = Vector2(0.5, 0.5)
