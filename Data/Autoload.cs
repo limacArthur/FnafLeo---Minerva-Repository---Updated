@@ -5,7 +5,6 @@ using Godot;
 
 namespace FNAFLEOv2
 {
-    // Alterado para propriedades { get; set; } para garantir compatibilidade com o System.Text.Json
     public class Data
     {
         public int? night { get; set; }
@@ -16,7 +15,6 @@ namespace FNAFLEOv2
     {
         public static Data loadedData;
 
-        // Alterado de "res://" para "user://" para funcionar no jogo exportado
         string path = ProjectSettings.GlobalizePath("user://save.json");
         public Data data;
 

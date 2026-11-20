@@ -22,8 +22,9 @@ Transition="*uid://dfvda1x6bgadh"
 
 [display]
 
+window/size/mode=4
+window/size/resizable=false
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [dotnet]
 

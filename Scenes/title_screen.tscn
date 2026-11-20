@@ -3,7 +3,7 @@
 [ext_resource type="AudioStream" uid="uid://1u14tc4oxmqg" path="res://Audio/TemporaryTitle.mp3" id="1_o1e67"]
 [ext_resource type="Script" uid="uid://df84b4egts27" path="res://Scripts/Title/TitleAudio.cs" id="2_ycay6"]
 [ext_resource type="Texture2D" uid="uid://ern4wmyadky7" path="res://Sprites/TitleScreen/Tittle bakcground.png" id="3_bsy20"]
-[ext_resource type="VideoStream" uid="uid://bpfxu5s1on3mr" path="res://Objects/SPLASH-SCREEN DEF.ogv" id="4_o1e67"]
+[ext_resource type="VideoStream" uid="uid://cbih7dqe31cdh" path="res://Objects/Splash Screen - Minerva.ogv" id="4_o1e67"]
 [ext_resource type="Script" uid="uid://c6q6v6b48sriq" path="res://Scripts/Title/Splash.cs" id="5_x2pfe"]
 [ext_resource type="Script" uid="uid://bumwgt88elwgg" path="res://Scripts/Title/Static.cs" id="6_k1y01"]
 [ext_resource type="Texture2D" uid="uid://4euo5osduuwo" path="res://Sprites/TitleScreen/Button Icon.png" id="7_4blwa"]
@@ -75,8 +75,9 @@ offset_bottom = 106.0
 [node name="Continue" type="Button" parent="Control" unique_id=615317140]
 layout_mode = 0
 offset_left = 100.0
-offset_right = 376.0
-offset_bottom = 71.0
+offset_top = -97.0
+offset_right = 378.0
+offset_bottom = -26.0
 scale = Vector2(0.5, 0.5)
 theme_override_font_sizes/font_size = 45
 text = "  CONTINUE"
@@ -91,9 +92,9 @@ hideIfJustStarted = true
 [node name="New game" type="Button" parent="Control" unique_id=1210761458]
 layout_mode = 0
 offset_left = 100.0
-offset_top = 50.0
+offset_top = -47.0
 offset_right = 405.0
-offset_bottom = 121.0
+offset_bottom = 24.0
 scale = Vector2(0.5, 0.5)
 theme_override_font_sizes/font_size = 45
 text = "  NEW GAME"
@@ -106,9 +107,9 @@ eventName = "NewGame"
 [node name="Select night" type="Button" parent="Control" unique_id=154745294]
 layout_mode = 0
 offset_left = 100.0
-offset_top = 100.0
+offset_top = 3.0
 offset_right = 483.0
-offset_bottom = 171.0
+offset_bottom = 74.0
 scale = Vector2(0.5, 0.5)
 theme_override_font_sizes/font_size = 45
 text = "  SELECT NIGHT"
@@ -120,9 +121,9 @@ script = ExtResource("8_vqgqr")
 [node name="Settings" type="Button" parent="Control" unique_id=829781361]
 layout_mode = 0
 offset_left = 100.0
-offset_top = 150.0
+offset_top = 53.0
 offset_right = 483.0
-offset_bottom = 221.0
+offset_bottom = 124.0
 scale = Vector2(0.5, 0.5)
 theme_override_font_sizes/font_size = 45
 text = "  SETTINGS"
@@ -134,9 +135,9 @@ script = ExtResource("8_vqgqr")
 [node name="Extras" type="Button" parent="Control" unique_id=1024223579]
 layout_mode = 0
 offset_left = 100.0
-offset_top = 200.0
+offset_top = 103.0
 offset_right = 483.0
-offset_bottom = 271.0
+offset_bottom = 174.0
 scale = Vector2(0.5, 0.5)
 theme_override_font_sizes/font_size = 45
 text = "  EXTRAS"
@@ -144,6 +145,22 @@ icon = ExtResource("7_4blwa")
 flat = true
 alignment = 0
 script = ExtResource("8_vqgqr")
+
+[node name="Quit" type="Button" parent="Control" unique_id=1221894489]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 153.0
+offset_right = 483.0
+offset_bottom = 224.0
+scale = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 45
+text = " QUIT GAME
+"
+icon = ExtResource("7_4blwa")
+flat = true
+alignment = 0
+script = ExtResource("8_vqgqr")
+eventName = "QuitGame"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=732831340]
 position = Vector2(-309, 447)

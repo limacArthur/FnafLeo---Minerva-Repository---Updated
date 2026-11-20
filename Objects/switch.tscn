@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bkliivl5jm8vl"]
+
+[ext_resource type="Script" uid="uid://cha52n3bsq6bb" path="res://Scripts/Control/Switch.cs" id="1_yyvnn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_en4se"]
+size = Vector2(36, 54)
+
+[node name="Switch" type="Area2D" unique_id=470768832]
+script = ExtResource("1_yyvnn")
+
+[node name="SwitchCollider" type="CollisionShape2D" parent="." unique_id=82174748]
+position = Vector2(18, 27)
+shape = SubResource("RectangleShape2D_en4se")
+
+[node name="Button" type="Button" parent="." unique_id=815266372]
+offset_right = 36.0
+offset_bottom = 54.0
+flat = true

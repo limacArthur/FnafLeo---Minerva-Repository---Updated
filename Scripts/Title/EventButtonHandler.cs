@@ -52,6 +52,9 @@ namespace FNAFLEOv2.Scripts.Title
                 case "Continue":
                     EventBus.Instance.EmitSignal(EventBus.SignalName.ContinueGame);
                     break;
+                case "QuitGame":
+                    GetTree().Quit();
+                    break;
                 default:
                     GD.PrintErr($"Unknown event name: {eventName}");
                     break;
